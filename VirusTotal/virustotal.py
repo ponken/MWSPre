@@ -93,3 +93,13 @@ class VTReportOperate:
     def getPositives(self)->int:
         return self.report['positives']
 
+    #ベンダー数
+    def getTotal(self)->int:
+        return self.report['total']
+
+    #パーセンテージ
+    def getPercent(self)->float:
+        positives = float(self.getPositives())
+        total = float(self.getTotal())
+        return positives/total
+
